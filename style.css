@@ -1,0 +1,119 @@
+
+@font-face {
+ font-family: 'Wevli Regular';
+ src: url('wevli_regular.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+
+h1 {
+    font-family: 'Wevli Regular', -apple-system, 'Segoe UI', Arial, system-ui, sans-serif;
+    font-weight: lighter;
+    font-size: 72px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Wevli Regular', -apple-system, 'Segoe UI', Arial, system-ui, sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #a31f34;
+}
+
+h3 {
+    font-family: 'Wevli Regular',-apple-system, 'Segoe UI', Arial, system-ui, -apple-system, sans-serif;
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+}
+
+p, ul, u, ol, label {
+    font-family: -apple-system, 'Segoe UI', Verdana, system-ui, sans-serif;
+    font-size: 16px;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+pre {
+    margin-left: -50px;
+}
+
+.pTitle, .cInfo {
+    background-color: #a31f34;
+    color: white;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+}
+
+td, th {
+    border-collapse: separate;
+    font-family: monospace;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.diagrams {
+    width: 320px;
+    height: 240px;
+}
+
+button {
+    background-color: rgb(0,113,227);
+    box-shadow: none;
+    border: 4px solid black;
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 14px;
+    font-family: -apple-system, 'Segoe UI', system-ui, Geneva, Verdana, sans-serif;
+}
+
+.collapsible, .dataTable {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.collapsible:hover, .dataTable:hover {
+    border-radius: 0px;
+}
+
+.collapsible_content {
+    display: none;
+    overflow: hidden;
+    background-color: rgb(32, 32, 32);
+}
+
+button:hover {
+    background-color: darkblue;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #006EDB;
+}
