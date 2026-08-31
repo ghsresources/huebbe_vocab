@@ -213,9 +213,9 @@
             document.getElementById("results").textContent = "Questions Correct: " + numCorrect + " / " + numPossible + " (" + Math.round(numCorrect / numPossible * 100) + "%) ";
             const remark = document.getElementById("remarks");
             if (numCorrect == 0) { remark.textContent = "Did you even try?"; }
-            if (numCorrect > 0 && numCorrect < 15) { remark.textContent = "Oh no! Review the words you got incorrect and continue studying!"; }
-            if (numCorrect >= 15 && numCorrect < 20) { remark.textContent = "Please review the words you got incorrect: it will help you get a higher score on the vocab test."; }
-            if (numCorrect >= 20 && numCorrect < 25) { remark.textContent = "Not bad, but there's definitely some room for improvement. Review the words you got incorrect and pay extra attention to them."; }
+            if (numCorrect > 0 && numCorrect < 18) { remark.textContent = "Oh no! Review the words you got incorrect and continue studying!"; }
+            if (numCorrect >= 18 && numCorrect < 22) { remark.textContent = "Please review the words you got incorrect: it will help you get a higher score on the vocab test."; }
+            if (numCorrect >= 22 && numCorrect < 25) { remark.textContent = "Not bad, but there's definitely some room for improvement. Review the words you got incorrect and pay extra attention to them."; }
             if (numCorrect >= 25 && numCorrect < 30) { remark.textContent = "Good job on this practice test! Continue to study and review the words you got incorrect."; }
             if (numCorrect == 30) { remark.textContent = "Excellent job! You are definitely ready for the vocab test!"; }
         });
