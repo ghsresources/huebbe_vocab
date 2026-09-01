@@ -159,6 +159,7 @@
     <br><br>
     <h3 style="text-align: center;" id="results"></h3>
     <h3 style="text-align: center;" id="remarks"></h3>
+    <div id="printBtn" style="display: flex; justify-content: center; align-items: center;"></div>
     <center><button id="submit">Submit!</button></center><br><br>
     </body>
 
@@ -166,6 +167,7 @@
 
         const numPossible = 30;
         const button = document.getElementById("submit");
+        let btnClicked = 0;
 
         function correct(str) {
             document.getElementById(str).textContent = "Correct: ";
@@ -179,6 +181,7 @@
 
         button.addEventListener("click", function() {
             let numCorrect = 0;
+            btnClicked++;
             if (document.getElementById("q1").valueAsNumber == 1) { numCorrect++; correct("t1"); } else { incorrect("t1"); }
             if (document.getElementById("q2").valueAsNumber == 5) { numCorrect++; correct("t2"); } else { incorrect("t2"); }
             if (document.getElementById("q3").valueAsNumber == 9) { numCorrect++; correct("t3"); } else { incorrect("t3"); }
@@ -218,6 +221,21 @@
             if (numCorrect >= 22 && numCorrect < 25) { remark.textContent = "Not bad, but there's definitely some room for improvement. Review the words you got incorrect and pay extra attention to them."; }
             if (numCorrect >= 25 && numCorrect < 30) { remark.textContent = "Good job on this practice test! Continue to study and review the words you got incorrect."; }
             if (numCorrect == 30) { remark.textContent = "Excellent job! You are definitely ready for the vocab test!"; }
+
+            if (btnClicked < 2) {
+                const printButton = document.createElement("button");
+                const container = document.getElementById("printBtn");
+                printButton.textContent = "Print Results";
+                printButton.type = "button";
+                printButton.id = "dynamic-btn";
+                printButton.style = "background-color: green; align-self: center;"
+
+                printButton.addEventListener('click', () => {
+                    window.print();
+                });
+
+                container.appendChild(printButton);
+            }
         });
 
     </script>
